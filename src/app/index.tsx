@@ -1,32 +1,40 @@
-import {View, Text, Alert, Button} from "react-native";
-import {StyleSheet} from "react-native";
+import { useState } from "react"
+import { View, Text, StyleSheet} from "react-native";
+import { router } from "expo-router";
+
+import {Button} from "@/components/button";
+import {Input} from "@/components/input";
+
 
 export default function Index(){
-    function handleMessage(){
-        console.log("testee");
-        return Alert.alert("Hello React Native");
+    const [name, setName] = useState("")
+
+    function handleNext(){
+        router.navigate("/dashboard")
     }
+
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>Hello React</Text>
+            <Text style={styles.title}>Olá, {name}</Text>
 
-            <Button title="Enviar" onPress={handleMessage}/>
+            <Input onChangeText={setName}/>
+
+            <Button title="Entrar" onPress={handleNext} activeOpacity={0.3}/>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-
      container: {
         flex: 1,
         padding: 16,
         justifyContent: "center",
+        gap: 16,
     },
 
     title: {
-        color: "red",
+        color: "Black",
         fontSize: 24,
         fontWeight: "bold",
-        textAlign: "center",
     },
 })
