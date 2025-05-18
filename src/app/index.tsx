@@ -3,12 +3,11 @@ import { View, Text, StyleSheet } from "react-native";
 import { router } from "expo-router";
 
 import { Button } from "@/components/button";
-import { Input } from "@/components/input";
 
 export default function Index() {
 
   function handleNext() {
-    router.navigate("/adicionaTarefa");
+    router.navigate("/Tasks");
   }
 
   return (
