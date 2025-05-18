@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { View, Text, StyleSheet } from "react-native";
 import { router } from "expo-router";
 
@@ -6,18 +6,21 @@ import { Button } from "@/components/button";
 import { Input } from "@/components/input";
 
 export default function Index() {
-  const [name, setName] = useState("");
 
   function handleNext() {
-    router.navigate("/dashboard");
+    router.navigate("/adicionaTarefa");
   }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Olá, {name}</Text>
-
-      <Input onChangeText={setName} />
-
+      
+      <Text style={styles.title}>To-Do List</Text>
+      
+      <Text style={styles.text}>
+        É uma ferramenta de organização que ajuda a manter o foco e a lembrar
+        das coisas que precisam ser feitas.{" "}
+      </Text>
+      
       <Button title="Entrar" onPress={handleNext} activeOpacity={0.3} />
     </View>
   );
@@ -35,5 +38,14 @@ const styles = StyleSheet.create({
     color: "Black",
     fontSize: 24,
     fontWeight: "bold",
+    textAlign: "center",
+    marginBottom: 24,
+  },
+  text: {
+    color: "Gray",
+    fontSize: 16,
+    fontWeight: "300",
+    textAlign: "center",
+    marginBottom: 10,
   },
 });
