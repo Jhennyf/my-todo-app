@@ -30,8 +30,8 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files
+# Android
+*.apk
 .env*.local
 
-# typescript
 *.tsbuildinfo
