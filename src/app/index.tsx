@@ -1,29 +1,29 @@
-
 import { View, Text, StyleSheet } from "react-native";
 import { router } from "expo-router";
-import Login from "@/app/login";
-
 import { Button } from "@/components/button";
 
-export default function App() {
-
+export default function Index() {
   function handleNext() {
     router.navigate("/Tasks");
   }
 
+  // Função para navegar para a tela de login
+  function handleLogin() {
+    router.navigate("/login");
+  }
+
   return (
     <View style={styles.container}>
-      
+
       <Text style={styles.title}>To-Do List</Text>
-      
+
       <Text style={styles.text}>
         É uma ferramenta de organização que ajuda a manter o foco e a lembrar
-        das coisas que precisam ser feitas.{" "}
+        das coisas que precisam ser feitas.
       </Text>
-     
-      <Login />
-      
-      <Button title="Entrar" onPress={handleNext} activeOpacity={0.3} />
+
+      <Button title="Login" onPress={handleLogin} activeOpacity={0.3}  />
+      <Button title="Iniciar" onPress={handleNext} activeOpacity={0.3} />
     </View>
   );
 }
@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     gap: 16,
   },
-
   title: {
     color: "Black",
     fontSize: 24,

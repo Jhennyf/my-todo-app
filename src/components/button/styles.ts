@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
   button: {
     width: "100%",
     height: 56,
-    backgroundColor: "#E15610",
+    backgroundColor: "#8B008B",
     borderRadius: 8,
     justifyContent: "center",
     alignItems: "center",
@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
   buttonVoltar: {
     width: "100%",
     height: 30,
-    backgroundColor: "#E15610",
+    backgroundColor: "#8B008B",
     borderRadius: 8,
     justifyContent: "center",
     alignItems: "center",
