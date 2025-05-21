@@ -1,10 +1,11 @@
 
 import { View, Text, StyleSheet } from "react-native";
 import { router } from "expo-router";
+import Login from "@/app/login";
 
 import { Button } from "@/components/button";
 
-export default function Index() {
+export default function App() {
 
   function handleNext() {
     router.navigate("/Tasks");
@@ -19,6 +20,8 @@ export default function Index() {
         É uma ferramenta de organização que ajuda a manter o foco e a lembrar
         das coisas que precisam ser feitas.{" "}
       </Text>
+     
+      <Login />
       
       <Button title="Entrar" onPress={handleNext} activeOpacity={0.3} />
     </View>
