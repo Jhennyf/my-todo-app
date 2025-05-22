@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     padding: 16,
     justifyContent: "center",
     gap: 16,
+    backgroundColor: "#F5F3FF",
   },
   title: {
     color: "Black",
